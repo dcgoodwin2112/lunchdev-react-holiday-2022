@@ -99,7 +99,7 @@ export default function About() {
         Dan is {content.firstThing}. Since he was a child, Dan has{" "}
         {content.childhoodThing}. His hobbies include{" "}
         {`${content.hobbies.one}, ${content.hobbies.two}, and ${content.hobbies.three}`}
-        . His main pursuit is life is {content.mainThing}.
+        . His main pursuit in life is {content.mainThing}.
       </p>
       </div>
     </main>
