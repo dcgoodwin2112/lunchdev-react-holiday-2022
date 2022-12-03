@@ -33,7 +33,7 @@ const firstThings = [
 const childhoodThings = [
   "not really been all that skilled at well... anything",
   "had lofty goals such as world conquest and teaching ducks how to recognize road signs",
-  "believed in reincarnation and that he was actually a jellyfish in a past life",
+  "believed that he was actually a jellyfish in a past life",
   "always wanted to be the batman",
   "gotten a sick and twisted sense of enjoyment from putting fish in the microwave",
 ];
@@ -93,13 +93,15 @@ export default function About() {
   }
   return (
     <main>
+      <div style={{padding: "10px 25px"}}>
       <h1>About Dan, {content.title}</h1>
-      <p>
+      <p style={{maxWidth: "600px"}}>
         Dan is {content.firstThing}. Since he was a child, Dan has{" "}
         {content.childhoodThing}. His hobbies include{" "}
         {`${content.hobbies.one}, ${content.hobbies.two}, and ${content.hobbies.three}`}
         . His main pursuit is life is {content.mainThing}.
       </p>
+      </div>
     </main>
   );
 }
