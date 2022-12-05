@@ -1,4 +1,3 @@
-"use client";
 import About from "./about";
 import styles from "./page.module.css";
 
