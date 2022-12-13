@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useReducer } from "react";
+import React, { useEffect, useReducer } from "react";
 import styles from "./about.module.css";
 
 const INIT = {
@@ -53,7 +53,7 @@ const mainThings = [
   "breaking all the rules and coloring outside the lines",
 ];
 
-export default function About() {
+export default function About({ children }: { children?: React.ReactNode }) {
   const contentDispatch = (state: Content, action: { type: "update" }) => {
     const getRandomValue = (values: string[]) => {
       return values[Math.floor(Math.random() * values.length)];
@@ -102,6 +102,8 @@ export default function About() {
         {`${content.hobbies.one}, ${content.hobbies.two}, and ${content.hobbies.three}`}
         . His main pursuit in life is {content.mainThing}.
       </p>
+      {children}
+
       <button
         className={styles.button}
         onClick={() => dispatch({ type: "update" })}
